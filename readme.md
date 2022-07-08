@@ -100,4 +100,14 @@ $ docker image rm -f [image 명]
 #### 삭제 후
 ![image](https://user-images.githubusercontent.com/62974484/177903246-a41c1f15-8d14-4182-9c69-1ca0613d0a6c.png)
 
-
+### docker login
+#### 먼저 docker hub 에서 아이디를 만든다.
+#### 서버에서 도커 로그인
+```
+$ docker login
+Username: shinejh0528
+Password:
+```
+#### * 만약 안 되면 다음과 같이 시도해본다
+1. 자신의 홈 디렉토리에 .docker 폴더를 만들고 그 안에 config.json 파일을 빈 파일로 만든다.
+2. 그 다음 다시 로그인을 시도해본다.
