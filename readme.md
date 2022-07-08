@@ -79,7 +79,6 @@ CMD ["echo", "Hello wolrd !"]
 $ docker image ls
 $ docker run [image 명]
 ```
-#### <br/>
 ![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
 #### <br/>
 
@@ -90,3 +89,15 @@ $ docker run [image 명]
 ```$ docker system info```
 ##### 여기서 image 저장 경로도 확인할 수 있다.
 ![image](https://user-images.githubusercontent.com/62974484/177901305-ae80ebd4-30f7-4071-9423-7d8777b0d4af.png)
+
+### delete docker image
+#### jhshin_220708 이라는 이미지가 있다.
+![image](https://user-images.githubusercontent.com/62974484/177903089-8e6dcfd4-5236-4d98-a1b0-72f311b91839.png)
+#### 다음과 같이 입력하면 삭제된다. \-f 는 강제로 삭제(force) 옵션이다.
+```
+$ docker image rm -f [image 명]
+```
+#### 삭제 후
+![image](https://user-images.githubusercontent.com/62974484/177903246-a41c1f15-8d14-4182-9c69-1ca0613d0a6c.png)
+
+
