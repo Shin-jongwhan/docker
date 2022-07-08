@@ -99,6 +99,7 @@ $ docker image rm -f [image 명]
 ```
 #### 삭제 후
 ![image](https://user-images.githubusercontent.com/62974484/177903246-a41c1f15-8d14-4182-9c69-1ca0613d0a6c.png)
+#### <br/>
 
 ### docker login
 #### 먼저 docker hub 에서 아이디를 만든다.
@@ -122,3 +123,12 @@ Password:
     }
 }
 ```
+#### <br/>
+
+### docker push
+#### 계정을 만들면 자신의 계정으로 push 하여 docker 파일을 저장할 수 있다.
+1. docker hub 에서 repository 를 만든다.
+![image](https://user-images.githubusercontent.com/62974484/177934399-a51ac644-d241-4895-b1db-f58937c85ca9.png) <br/>
+2. \[자신의 계정명\]/\[repository\]:\[TAG\] 로 docker image 를 만든다. <br/>
+ex) $ docker build -t shinejh0528/test:python_hello_world
+![image](https://user-images.githubusercontent.com/62974484/177934495-10cb6c0d-76de-4f59-b35e-d8bfa9ec7e01.png) <br/> 
