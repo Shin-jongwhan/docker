@@ -77,3 +77,11 @@ CMD ["echo", "Hello wolrd !"]
 #### 이미지 설치 확인 및 실행
 ![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
 #### <br/>
+
+### docker system info
+#### 저장 공간 확인하기
+#### $ docker system df
+#### docker 정보 확인하기
+#### $ docker system info
+##### 여기서 image 저장 경로도 확인할 수 있다.
+![image](https://user-images.githubusercontent.com/62974484/177901305-ae80ebd4-30f7-4071-9423-7d8777b0d4af.png)
