@@ -75,6 +75,7 @@ CMD ["echo", "Hello wolrd !"]
 #### $ docker build -t \[원하는 이미지 명\] \[도커 파일 경로\]
 #### ex) $ docker build -t jhshin_220708 . (.을 쓰면 ./Dockerfile 을 가리킨다)
 #### 이미지 설치 확인 및 실행
+```$ docker image ls```
 ![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
 #### <br/>
 
