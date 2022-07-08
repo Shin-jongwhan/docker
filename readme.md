@@ -130,5 +130,12 @@ Password:
 1. docker hub 에서 repository 를 만든다.
 ![image](https://user-images.githubusercontent.com/62974484/177934399-a51ac644-d241-4895-b1db-f58937c85ca9.png) <br/>
 2. \[자신의 계정명\]/\[repository\]:\[TAG\] 로 docker image 를 만든다. <br/>
-ex) $ docker build -t shinejh0528/test:python_hello_world
+ex) $ docker build -t shinejh0528/test:python_hello_world .
 ![image](https://user-images.githubusercontent.com/62974484/177934495-10cb6c0d-76de-4f59-b35e-d8bfa9ec7e01.png) <br/> 
+3. docker push
+```
+docker push shinejh0528/test:python_hello_world
+```
+4. docker hub uoload 확인
+![image](https://user-images.githubusercontent.com/62974484/177935233-f077341c-a663-4a3b-9c0d-eb2751686dd4.png)
+#### <br/> 
