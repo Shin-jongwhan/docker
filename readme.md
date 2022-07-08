@@ -4,13 +4,15 @@
 ### <br/><br/><br/>
 
 ## 220708
-### docker 에서 이미지 설치하는 방법
+### install docker image 
 #### 이미지는 docker hub 에서 검색할 수 있다.
 #### https://hub.docker.com/
 #### <br/>
 #### 이미지 설치는 docker pull \[이미지 명\]:\[version\]으로 한다.
 #### $ docker pull python:3.9
 #### <br/>
+
+### docker run 방법
 #### docker 실행은 docker run 으로 한다.
 #### $ docker run python:3.9
 #### <br/>
@@ -18,6 +20,8 @@
 #### $ docker run python:3.9 python -c 'print("hello world!")'
 ![image](https://user-images.githubusercontent.com/62974484/177891673-5acbe326-a880-456f-961c-41562165eff5.png) <br/>
 #### <br/>
+
+### docker option
 #### docker 옵션은 아래 사이트에서 잘 정리되어 있다.
 https://wooono.tistory.com/348
 #### 주로 쓰는 옵션은 -i, -t, -v, -p가 있다.
@@ -26,6 +30,8 @@ https://wooono.tistory.com/348
 - \-v : 운영체제의 디렉터리와 docker container 의 디렉터리를 연결한다. docker container 의 계정은 대부분이 root 이며 /root/ 가 홈 디렉터리이다. <br/> ex) $ docker run -it -v \[자신의 디렉터리\]:/root/project python:3.9 <br/> /root/project 디렉터리는 container 에 없는 디렉터리로 자동으로 만들어지며 container 를 종료할 시 사라진다.
 - \-p : 운영체제의 port 와 container 의 포트를 각각 할당하여 연결한다. 서버 구동시 주로 활용한다. ex) -p 25565:25565
 #### <br/>
+
+### 활용
 #### -v 옵션을 활용하여 docker container 에 스크립트를 실행할 수 있도록 할 수 있다.
 #### ex) (-it 를 안 써도 실행은 되나 안 쓰면 stdout  프로그램이 모두 끝나고 보여준다.)
 #### $ docker run -it -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
@@ -58,3 +64,16 @@ print(os.system("python --version"))
 print(glob.glob("/root/project2/*"))
 ```
 ![image](https://user-images.githubusercontent.com/62974484/177893625-3aebaaf4-9446-4bc1-8d53-ebeb5f4a1cad.png)
+#### <br/>
+
+### docker image build 하는 방법
+#### Dockerfile 이라는 파일을 준비한다. Dockerfile 은 Go 라는 언어로 작성된다.
+```
+FROM alpine
+CMD ["echo", "Hello wolrd !"]
+```
+#### $ docker build -t \[원하는 이미지 명\] \[도커 파일 경로\]
+#### ex) $ docker build -t jhshin_220708 . (.을 쓰면 ./Dockerfile 을 가리킨다)
+#### 이미지 설치 확인 및 실행
+![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
+#### <br/>
