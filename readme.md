@@ -116,7 +116,7 @@ Password:
 {
     "auths": {
         "https://index.docker.io/v1/": {
-            "auth": "lsdlfvmkasmfasmdfmsadlfm==어쩌구저쩌구"
+            "auth": "lsdlfvmkasmfasmdfmsadlfm==blahblah"
         }
     }
 }
