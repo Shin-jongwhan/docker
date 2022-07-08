@@ -9,15 +9,15 @@
 #### https://hub.docker.com/
 #### <br/>
 #### 이미지 설치는 docker pull \[이미지 명\]:\[version\]으로 한다.
-#### $ docker pull python:3.9
+```$ docker pull python:3.9```
 #### <br/>
 
 ### docker run 방법
 #### docker 실행은 docker run 으로 한다.
-#### $ docker run python:3.9
+```$ docker run python:3.9```
 #### <br/>
 #### 명령어 전달은 뒤에 이어서 쓰고 기본 문법을 실행할 수 있다.
-#### $ docker run python:3.9 python -c 'print("hello world!")'
+```$ docker run python:3.9 python -c 'print("hello world!")'```
 ![image](https://user-images.githubusercontent.com/62974484/177891673-5acbe326-a880-456f-961c-41562165eff5.png) <br/>
 #### <br/>
 
@@ -34,7 +34,7 @@ https://wooono.tistory.com/348
 ### 활용
 #### -v 옵션을 활용하여 docker container 에 스크립트를 실행할 수 있도록 할 수 있다.
 #### ex) (-it 를 안 써도 실행은 되나 안 쓰면 stdout  프로그램이 모두 끝나고 보여준다.)
-#### $ docker run -it -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
+```$ docker run -it -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py```
 #### test.py
 ```
 import glob
@@ -80,8 +80,8 @@ CMD ["echo", "Hello wolrd !"]
 
 ### docker system info
 #### 저장 공간 확인하기
-#### $ docker system df
+```$ docker system df```
 #### docker 정보 확인하기
-#### $ docker system info
+```$ docker system info```
 ##### 여기서 image 저장 경로도 확인할 수 있다.
 ![image](https://user-images.githubusercontent.com/62974484/177901305-ae80ebd4-30f7-4071-9423-7d8777b0d4af.png)
