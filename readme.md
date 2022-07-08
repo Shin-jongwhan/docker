@@ -111,3 +111,13 @@ Password:
 #### * 만약 안 되면 다음과 같이 시도해본다
 1. 자신의 홈 디렉토리에 .docker 폴더를 만들고 그 안에 config.json 파일을 빈 파일로 만든다.
 2. 그 다음 다시 로그인을 시도해본다.
+##### config.json 예시
+```
+{
+    "auths": {
+        "https://index.docker.io/v1/": {
+            "auth": "lsdlfvmkasmfasmdfmsadlfm==어쩌구저쩌구"
+        }
+    }
+}
+```
