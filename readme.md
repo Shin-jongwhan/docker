@@ -27,12 +27,12 @@ https://wooono.tistory.com/348
 - \-p : 운영체제의 port 와 container 의 포트를 각각 할당하여 연결한다. 서버 구동시 주로 활용한다. ex) -p 25565:25565
 #### <br/>
 #### -v 옵션을 활용하여 docker container 에 스크립트를 실행할 수 있도록 할 수 있다.
-#### ex) 
-#### $ docker run -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
+#### ex) (-it 를 안 써도 실행은 되나 안 쓰면 stdout  프로그램이 모두 끝나고 보여준다.)
+#### $ docker run -it -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
 #### test.py
 ![image](https://user-images.githubusercontent.com/62974484/177892631-2414a677-2d6f-44ad-86ac-ffc830cf8bdb.png)
 #### docker 에서 실행했을 경우 python version
-![image](https://user-images.githubusercontent.com/62974484/177892901-a0930613-da9c-40a9-8248-3f0434164fe2.png)
+![image](https://user-images.githubusercontent.com/62974484/177893323-ff1f9ea0-28a0-4d06-a3af-76af92b782ad.png)
 #### 운영체제 내 conda 환경에서 python version
 ![image](https://user-images.githubusercontent.com/62974484/177892938-76f4d5c9-8946-4801-92b1-0bb697b71d87.png)
 #### <br/>
