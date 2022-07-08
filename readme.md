@@ -36,3 +36,5 @@ https://wooono.tistory.com/348
 #### 운영체제 내 conda 환경에서 python version
 ![image](https://user-images.githubusercontent.com/62974484/177892938-76f4d5c9-8946-4801-92b1-0bb697b71d87.png)
 #### <br/>
+#### \-v 옵션은 여러 개 사용가능하다. 스크립트 경로와 파일 인식 등 원하는 경로를 한 번에 줄 수 있다. 아주 유용하다 !
+![image](https://user-images.githubusercontent.com/62974484/177893625-3aebaaf4-9446-4bc1-8d53-ebeb5f4a1cad.png)
