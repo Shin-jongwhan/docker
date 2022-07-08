@@ -24,3 +24,9 @@ https://wooono.tistory.com/348
 - \-i : 표준 입력(stdin)을 활성화 함. 이 명령어를 통해 docker container 안에서 bash 명령어를 쓸 수 있다.
 - \-t : TTY (pseudo-TTY) 모드. \-i 옵션을 써서 bash 명령어를 쓰려면 이 옵션을 같이 써야 한다. **\-it** 와 같이 자주 쓴다.
 - \-v : 운영체제의 디렉터리와 docker container 의 디렉터리를 연결한다. docker container 의 계정은 대부분이 root 이며 /root/ 가 홈 디렉터리이다. <br/> ex) $ docker run -it -v \[자신의 디렉터리\]:/root/project python:3.9 <br/> /root/project 디렉터리는 container 에 없는 디렉터리로 자동으로 만들어지며 container 를 종료할 시 사라진다.
+#### <br/>
+#### -v 옵션을 활용하여 docker container 에 스크립트를 실행할 수 있도록 할 수 있다.
+#### ex) 
+#### $ docker run -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
+![image](https://user-images.githubusercontent.com/62974484/177892631-2414a677-2d6f-44ad-86ac-ffc830cf8bdb.png)
+#### <br/>
