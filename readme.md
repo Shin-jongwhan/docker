@@ -28,5 +28,6 @@ https://wooono.tistory.com/348
 #### -v 옵션을 활용하여 docker container 에 스크립트를 실행할 수 있도록 할 수 있다.
 #### ex) 
 #### $ docker run -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
+#### test.py
 ![image](https://user-images.githubusercontent.com/62974484/177892631-2414a677-2d6f-44ad-86ac-ffc830cf8bdb.png)
 #### <br/>
