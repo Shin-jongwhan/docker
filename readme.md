@@ -30,11 +30,31 @@ https://wooono.tistory.com/348
 #### ex) (-it 를 안 써도 실행은 되나 안 쓰면 stdout  프로그램이 모두 끝나고 보여준다.)
 #### $ docker run -it -v /TBI/People/tbi/jhshin/script/test/docker:/root/project python:3.9 python /root/project/test.py
 #### test.py
-![image](https://user-images.githubusercontent.com/62974484/177892631-2414a677-2d6f-44ad-86ac-ffc830cf8bdb.png)
+```
+import glob
+import os
+import time
+
+print("hello world !")
+time.sleep(1)
+print(os.system("python --version"))
+```
 #### docker 에서 실행했을 경우 python version
 ![image](https://user-images.githubusercontent.com/62974484/177893323-ff1f9ea0-28a0-4d06-a3af-76af92b782ad.png)
 #### 운영체제 내 conda 환경에서 python version
 ![image](https://user-images.githubusercontent.com/62974484/177892938-76f4d5c9-8946-4801-92b1-0bb697b71d87.png)
 #### <br/>
 #### \-v 옵션은 여러 개 사용가능하다. 스크립트 경로와 파일 인식 등 원하는 경로를 한 번에 줄 수 있다. 아주 유용하다 !
+#### test.py
+```
+import glob
+import os
+import time
+
+print("hello world !")
+time.sleep(1)
+print(os.system("python --version"))
+
+print(glob.glob("/root/project2/*"))
+```
 ![image](https://user-images.githubusercontent.com/62974484/177893625-3aebaaf4-9446-4bc1-8d53-ebeb5f4a1cad.png)
