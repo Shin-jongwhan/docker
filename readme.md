@@ -136,6 +136,6 @@ ex) $ docker build -t shinejh0528/test:python_hello_world .
 ```
 docker push shinejh0528/test:python_hello_world
 ```
-4. docker hub uoload 확인
+4. docker hub uoload 확인 <br/>
 ![image](https://user-images.githubusercontent.com/62974484/177935233-f077341c-a663-4a3b-9c0d-eb2751686dd4.png)
 #### <br/> 
