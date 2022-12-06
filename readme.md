@@ -19,7 +19,7 @@
 ### 명령어 전달은 뒤에 이어서 쓰고 기본 문법을 실행할 수 있다.
 ```$ docker run python:3.9 python -c 'print("hello world!")'```
 ![image](https://user-images.githubusercontent.com/62974484/177891673-5acbe326-a880-456f-961c-41562165eff5.png) <br/>
-### <br/>
+### <br/><br/><br/>
 
 ## docker option
 ### docker 옵션은 아래 사이트에서 잘 정리되어 있다.
@@ -29,7 +29,7 @@ https://wooono.tistory.com/348
 - \-t : TTY (pseudo-TTY) 모드. \-i 옵션을 써서 bash 명령어를 쓰려면 이 옵션을 같이 써야 한다. **\-it** 와 같이 자주 쓴다.
 - \-v : 운영체제의 디렉터리와 docker container 의 디렉터리를 연결한다. docker container 의 계정은 대부분이 root 이며 /root/ 가 홈 디렉터리이다. <br/> ex) $ docker run -it -v \[자신의 디렉터리\]:/root/project python:3.9 <br/> /root/project 디렉터리는 container 에 없는 디렉터리로 자동으로 만들어지며 container 를 종료할 시 사라진다.
 - \-p : 운영체제의 port 와 container 의 포트를 각각 할당하여 연결한다. 서버 구동시 주로 활용한다. ex) -p 25565:25565
-### <br/>
+### <br/><br/><br/>
 
 ## 활용
 ### -v 옵션을 활용하여 docker container 에 스크립트를 실행할 수 있도록 할 수 있다.
@@ -64,7 +64,7 @@ print(os.system("python --version"))
 print(glob.glob("/root/project2/*"))
 ```
 ![image](https://user-images.githubusercontent.com/62974484/177893625-3aebaaf4-9446-4bc1-8d53-ebeb5f4a1cad.png)
-### <br/>
+### <br/><br/><br/>
 
 ## docker image build 하는 방법
 ### Dockerfile 이라는 파일을 준비한다. Dockerfile 은 Go 라는 언어로 작성된다.
@@ -80,7 +80,7 @@ $ docker image ls
 $ docker run [image 명]
 ```
 ![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
-### <br/>
+### <br/><br/><br/>
 
 ## docker system info
 ### 저장 공간 확인하기
@@ -100,7 +100,7 @@ $ docker image rm -f [image 명]
 ```
 ### 삭제 후
 ![image](https://user-images.githubusercontent.com/62974484/177903246-a41c1f15-8d14-4182-9c69-1ca0613d0a6c.png)
-### <br/>
+### <br/><br/><br/>
 
 ## 이미지 이름 변경
 ### 이름 변경 시 아래와 같이 한다.
@@ -116,7 +116,7 @@ $ docker rmi -f jhshin-java7:latest
 ```
 ### 삭제 확인
 #### ![image](https://user-images.githubusercontent.com/62974484/206048010-6cf743d4-0a61-4d6b-b400-2a9919604633.png)
-
+### <br/><br/><br/>
 
 ## docker login
 ### 먼저 docker hub 에서 아이디를 만든다.
