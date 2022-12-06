@@ -109,9 +109,10 @@ $ docker image rm -f [image 명]
 $ docker image tag jhshin-java:latest jhshin-java7:latest
 ```
 ### 하지만 이렇게 하면 이전 repo 이름이 남아 있기 때문에 지워줘야 한다.
+#### ![image](https://user-images.githubusercontent.com/62974484/206047911-218d1b6d-2788-44ac-adc0-27535e9d4922.png)
 #### $ docker rmi \[태그명\]
 ```
-$ docker rmi jhshin-java7:latest
+$ docker rmi -f jhshin-java7:latest
 ```
 
 
