@@ -150,6 +150,7 @@ docker push shinejh0528/test:python_hello_world
 ### CMD 는 컨테이너가 만들어지고 난 후, 도커 실행 시에 처음으로 실행되는 명령어이다.
 ### <br/>
 ### Docker 파일 예시
+#### 마지막에 CMD \["bash"\] 는 docker run -it \[컨테이너 이름\]:\[버전\] 으로 컨테이너 실행 시 docker 안에 리눅스 쉘을 유지하도록 한다.
 ```
 FROM ubuntu:latest
 RUN ["mkdir", "/root/project"]
@@ -164,4 +165,9 @@ CMD ["bash"]
 $ docker build -t jhshin_221206 .
 ```
 #### ![image](https://user-images.githubusercontent.com/62974484/205848550-92722441-dab5-4b5c-a9a1-258bbc3e995f.png)
-
+### 접속
+```
+$ docker run -it jhshin_221206
+```
+### /root/project 디렉터리가 만들어진 것을 알 수 있다.
+#### ![image](https://user-images.githubusercontent.com/62974484/205849008-c2988f30-c16d-40d6-a7f4-46abd8422422.png)
