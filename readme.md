@@ -140,3 +140,14 @@ docker push shinejh0528/test:python_hello_world
 4. docker hub uoload 확인 <br/>
 ![image](https://user-images.githubusercontent.com/62974484/177935233-f077341c-a663-4a3b-9c0d-eb2751686dd4.png)
 ### <br/> 
+
+------------------------------------------------------------------------------
+# Dockerfile 세부 명령어 
+### <br/><br/><br/>
+
+## RUN, CMD
+### RUN 과 CMD 가 종종 헷갈리는데, RUN 같은 경우는 docker build 를 할 때(컨테이너 생성할 때) 최초로 실행되는 명령어이다. 주로 컨테이너를 만들 때 sudo apt-get install ... 로 프로그램들을 설치할 때 사용한다.
+### CMD 는 컨테이너가 만들어지고 난 후, 도커 실행 시에 처음으로 실행되는 명령어이다.
+### 예시
+#### ![image](https://user-images.githubusercontent.com/62974484/205848130-c6ba4b7e-6c07-4a92-806d-9734159d03f6.png)
+
