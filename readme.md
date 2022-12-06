@@ -114,6 +114,8 @@ $ docker image tag jhshin-java:latest jhshin-java7:latest
 ```
 $ docker rmi -f jhshin-java7:latest
 ```
+### 삭제 확인
+#### ![image](https://user-images.githubusercontent.com/62974484/206048010-6cf743d4-0a61-4d6b-b400-2a9919604633.png)
 
 
 ## docker login
