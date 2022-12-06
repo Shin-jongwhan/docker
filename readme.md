@@ -286,3 +286,7 @@ color evening\n" \
 RUN source ~/.bashrc
 CMD ["bash"]
 ```
+### 짜잔 ~ 이렇게 꾸밀 수 있다.
+#### ![image](https://user-images.githubusercontent.com/62974484/206049136-d95ceb04-102f-4136-bf44-0015a74ef9c4.png)
+### <br/><br/><br/> 
+
