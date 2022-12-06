@@ -102,6 +102,19 @@ $ docker image rm -f [image 명]
 ![image](https://user-images.githubusercontent.com/62974484/177903246-a41c1f15-8d14-4182-9c69-1ca0613d0a6c.png)
 ### <br/>
 
+## 이미지 이름 변경
+### 이름 변경 시 아래와 같이 한다.
+#### $ docker image tag \[이전 이름\]:\[ver\] \[변경할 이름\]:\[ver\]
+```
+$ docker image tag jhshin-java:latest jhshin-java7:latest
+```
+### 하지만 이렇게 하면 이전 repo 이름이 남아 있기 때문에 지워줘야 한다.
+#### $ docker rmi \[태그명\]
+```
+$ docker rmi jhshin-java7:latest
+```
+
+
 ## docker login
 ### 먼저 docker hub 에서 아이디를 만든다.
 ### 서버에서 도커 로그인
@@ -142,7 +155,7 @@ docker push shinejh0528/test:python_hello_world
 ### <br/> 
 
 ------------------------------------------------------------------------------
-# Dockerfile 세부 명령어 
+# Dockerfile
 ### <br/><br/><br/>
 
 ## RUN, CMD
@@ -171,3 +184,23 @@ $ docker run -it jhshin_221206
 ```
 ### /root/project 디렉터리가 만들어진 것을 알 수 있다.
 #### ![image](https://user-images.githubusercontent.com/62974484/205849008-c2988f30-c16d-40d6-a7f4-46abd8422422.png)
+### <br/><br/><br/>
+
+## 패키지 설치
+```
+FROM ubuntu:latest
+RUN ["mkdir", "/root/project"]
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install -y python3
+CMD ["python3", "--vercion"]
+CMD ["echo", "Hello wolrd !"]
+CMD ["bash"]
+```
+```
+$ docker build -t jhshin_221206 .
+```
+```
+$ docker run -it jhshin_221206
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/205853283-89c739eb-eba2-4be1-b790-8eea11411a11.png)
