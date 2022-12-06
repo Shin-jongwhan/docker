@@ -148,6 +148,20 @@ docker push shinejh0528/test:python_hello_world
 ## RUN, CMD
 ### RUN 과 CMD 가 종종 헷갈리는데, RUN 같은 경우는 docker build 를 할 때(컨테이너 생성할 때) 최초로 실행되는 명령어이다. 주로 컨테이너를 만들 때 sudo apt-get install ... 로 프로그램들을 설치할 때 사용한다.
 ### CMD 는 컨테이너가 만들어지고 난 후, 도커 실행 시에 처음으로 실행되는 명령어이다.
-### 예시
-#### ![image](https://user-images.githubusercontent.com/62974484/205848130-c6ba4b7e-6c07-4a92-806d-9734159d03f6.png)
+### <br/>
+### Docker 파일 예시
+```
+FROM ubuntu:latest
+RUN ["mkdir", "/root/project"]
+CMD ["java", "-version"]
+CMD ["echo", "Hello wolrd !"]
+CMD ["bash"]
+```
+### $ docker images 또는 $ docker image ls 를 통해 ubuntu 가 pull 되었는지 확인
+#### ![image](https://user-images.githubusercontent.com/62974484/205848365-72e81f28-4a54-47c2-bd70-748609292a4d.png)
+### 빌드
+```
+$ docker build -t jhshin_221206 .
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/205848550-92722441-dab5-4b5c-a9a1-258bbc3e995f.png)
 
