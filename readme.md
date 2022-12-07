@@ -64,6 +64,15 @@ print(os.system("python --version"))
 print(glob.glob("/root/project2/*"))
 ```
 ![image](https://user-images.githubusercontent.com/62974484/177893625-3aebaaf4-9446-4bc1-8d53-ebeb5f4a1cad.png)
+### <br/><br/>
+### 여러 개 명령어 전달
+### && 으로 명령어를 전달하면 도커에서 && 을 인식하는 것이 아니라 현재 리눅스 쉘에서 && 으로 인식하기 때문에 안 된다.
+### sh -c \"command\" 로 묶어서 전달해야 한다.
+```
+$ docker run -it -v /TBI/People/tbi/jhshin/script/docker/java/java:/root/project shinejh0528/java:latest sh -c "cd /root/project; java Helloworld"
+```
+### 결과
+#### ![image](https://user-images.githubusercontent.com/62974484/206057713-a6559092-be90-48a1-9488-325b3a9899e7.png)
 ### <br/><br/><br/>
 
 ## docker image build 하는 방법
