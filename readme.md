@@ -136,7 +136,16 @@ Username: shinejh0528
 Password:
 ```
 ### * 만약 안 되면 다음과 같이 시도해본다
-1. 자신의 홈 디렉토리에 .docker 폴더를 만들고 그 안에 config.json 파일을 빈 파일로 만든다.
+1. 자신의 홈 디렉토리에 .docker 폴더를 만들고 그 안에 config.json 파일을 아래 내용으로 만든다. auth 내용은 아무거나 해도 상관 없다.
+```
+{
+    "auths": {
+        "https://index.docker.io/v1/": {
+            "auth": "wwasdfasdfasf"
+        }
+    }
+}
+```
 2. 그 다음 다시 로그인을 시도해본다.
 3. 안 되면 $ sudo apt-get install gnupg2 pass 2개 패키지를 설치한 후 시도해본다.
 #### config.json 예시
