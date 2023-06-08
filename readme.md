@@ -242,6 +242,58 @@ $ docker build -t jhshin_221206 .
 $ docker run -it jhshin_221206
 ```
 #### ![image](https://user-images.githubusercontent.com/62974484/205853283-89c739eb-eba2-4be1-b790-8eea11411a11.png)
+### <br/>
+
+### `파일로 패키지를 설치하는 방법`
+### Dockerfile 경로에 설치하고 싶은 스크립트를 작성한다.
+```
+#!/usr/bin/env Rscript
+
+# R script to install requirements for exercises -------------------------------
+
+## a vector of packages to install (edit in this section) ----------------------
+### packages could be either on CRAN or bioconductor
+
+
+install.packages(c('cluster', 'lattice', 'mgcv', 'nlme', 'rpart', 'survival', 'MASS', 'class', 'nnet', 'Matrix', 'KernSmooth', 'codetools', 'foreign', 'boot', 'HGNChelper', 'openxlsx','tidyverse', 'metap'), repos='https://cran-archive.r-project.org')
+
+pkgs <- c("ggplot2", "BiocManager", "sctransform",
+                   "devtools", "cowplot", "matrixStats",
+                   "ggbeeswarm", "ggnewscale", "msigdbr", "ggrastr",
+                   "Seurat", "bit64", "scater",
+                   "AnnotationDbi",
+                    "SingleR", "clusterProfiler", "celldex",
+                    "dittoSeq", "DelayedArray",
+                    "DelayedMatrixStats",
+                    "limma", "SingleCellExperiment",
+                    "SummarizedExperiment",
+                    "slingshot", "batchelor",
+                    "clustree", "edgeR", "TCC", "ComplexHeatmap", "DESeq2", "ExperimentHub", "pheatmap", "dplyr", "stringr", "gridExtra","ggraph", "data.tree", "metap")
+
+### if packages need to be installed from github:
+### devtools::install_github("namespace/repo")
+
+## install Bioconductor --------------------------------------------------------
+if (!require("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+
+## install and check package loading -------------------------------------------
+for (pkg in basename(pkgs)) {
+    BiocManager::install(pkg, ask = FALSE, update = FALSE)
+
+    if (! library(pkg, character.only = TRUE, logical.return = TRUE)) {
+        write(paste0("Installation of package ",
+                     pkg,
+                     " exited with non-zero exit status"),
+                     stdout())
+        quit(status = 1, save = "no")
+    }
+}
+```
+#### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/2813367a-91b8-45db-a5ef-1e955d7ba472)
+### Dockerfile 에 해당 파일을 복사하고, 설치하는 명령어를 작성한다.
+#### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/3ae10599-fd19-4776-84a8-c0c41a1efb1f)
 ### <br/><br/><br/>
 
 ### .bashrc, .vimrc 를 구성할 수도 있다.
