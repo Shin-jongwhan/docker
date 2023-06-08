@@ -111,6 +111,14 @@ $ docker image rm -f [image 명]
 ![image](https://user-images.githubusercontent.com/62974484/177903246-a41c1f15-8d14-4182-9c69-1ca0613d0a6c.png)
 ### <br/><br/><br/>
 
+## delete docker container
+### docker ps 로 실행 중인 container 를 확인하고, tag 명으로 실행을 중지한다.
+### -f 옵션을 쓰면 강제로 삭제시킨다.
+```
+docker rm [tag]
+```
+### <br/><br/><br/>
+
 ## 이미지 이름 변경
 ### 이름 변경 시 아래와 같이 한다.
 #### $ docker image tag \[이전 이름\]:\[ver\] \[변경할 이름\]:\[ver\]
@@ -205,6 +213,15 @@ $ docker run -it jhshin_221206
 ```
 ### /root/project 디렉터리가 만들어진 것을 알 수 있다.
 #### ![image](https://user-images.githubusercontent.com/62974484/205849008-c2988f30-c16d-40d6-a7f4-46abd8422422.png)
+### <br/>
+
+### 포트 연결하는 방법은 다음과 같이 한다.
+### -e 옵션
+- -e, --env list : Set environment variables
+### --name 이라는 옵션으로 container 에 tag 를 달아줄 수 있다.
+```
+docker run -d -p 8787:8787 -e USER=rstudio -e PASSWORD=Rstudio@123 --name jhshin_test theragenbi/scrna_rstudio:1.0
+```
 ### <br/><br/><br/>
 
 ## 패키지 설치
