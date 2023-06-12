@@ -17,8 +17,20 @@
 ```$ docker run python:3.9```
 ### <br/>
 ### 명령어 전달은 뒤에 이어서 쓰고 기본 문법을 실행할 수 있다.
-```$ docker run python:3.9 python -c 'print("hello world!")'```
-![image](https://user-images.githubusercontent.com/62974484/177891673-5acbe326-a880-456f-961c-41562165eff5.png) <br/>
+```
+$ docker run python:3.9 python -c 'print("hello world!")'
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/177891673-5acbe326-a880-456f-961c-41562165eff5.png)
+### <br/>
+
+### 백그라운드로 실행하여 docker 터미널로 들어가게 만들고 싶을 경우
+```
+# background 실행
+docker run -it -d --name jhshin_test bigdatarndtheragenbio/jhshin_array_test_230612:latest
+
+# docker 접속
+docker exec -it jhshin_test /bin/bash
+```
 ### <br/><br/><br/>
 
 ## docker option
