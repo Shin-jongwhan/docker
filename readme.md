@@ -100,7 +100,13 @@ CMD ["echo", "Hello wolrd !"]
 $ docker image ls
 $ docker run [image 명]
 ```
-![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
+#### ![image](https://user-images.githubusercontent.com/62974484/177895321-355880cd-0c62-4724-99c5-730eff64eda9.png)
+### <br/>
+
+### 저장된 cache 에 상관없이 re-build 하는 방법
+```
+docker build --no-cache -t jhshin_220708 .
+```
 ### <br/><br/><br/>
 
 ## docker system info
