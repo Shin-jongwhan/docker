@@ -10,8 +10,8 @@
 #### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/380cc775-084e-42d1-b5cc-c951ccefc8c1)
 ### <br/><br/><br/>
 
-## 사용 방법
-### docker-componse.yml 이라는 yaml 파일을 작성해야 한다고 한다.
+## docker-componse.yml
+### docker compose 를 사용하려면 docker-componse.yml 이라는 yaml 파일을 작성해야 한다고 한다.
 ### ex)
 ```
 version: “3.9”
@@ -29,3 +29,23 @@ services:
 networks:
   my_network:
 ```
+### <br/><br/><br/>
+
+## 위 docker compose yaml 설명
+### docker compose 를 실행하면, redis 와 web 2 가지 서비스를 실행한다.
+#### * redis 는 "키-값" 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈 소스 기반의 비관계형 데이터베이스 관리 시스템이다.
+### 네트워크는 docker 에서 격리되고 그 격리되어 주어진 네트워크 안에서 docker 가 실행이 된다.
+### 이것에 대한 설정은 docker-componse.yml 에서 한다. network 범위와 network 이름을 쓸 수 있다.
+### web 의 경우 5000:5000 으로 네트워크를 연결했기에, 5000 port 로 접근할 수 있다.
+### <br/><br/><br/>
+
+## docker compose VS kubernetes
+### 🐳 docker compose
+### docker compose 를 기반으로, 그 안에 있는 네트워크 범위로 여러 서비스를 정의할 수 있다.
+### docker compose 는 하나의 서버(single server)에서 '여러 container 를 사용'하여 여러 서비스를 하나의 묶음인 서비스로 정의할 때 사용한다.
+### <br/>
+
+### 🎡 kubernetes
+### run containers as service 라고 요약할 수 있다.
+### 하나의 서버 또는 여러 서버 or machine 에서 실행한다.
+
