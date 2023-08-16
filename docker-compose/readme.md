@@ -48,4 +48,13 @@ networks:
 ### 🎡 kubernetes
 ### run containers as service 라고 요약할 수 있다.
 ### 하나의 서버 또는 여러 서버 or machine 에서 실행한다.
+### 하나의 kubernetes cluster 에는 여러 service 가 있고 service 안에는 pod 들이 있고, pod 안에는 container 가 있다.
+### pod 들 구성하는 하나의 서버(실제 컴퓨터 or VM...)는 'nod' 라고 불린다.
+### 각각의 service, pod 는 설정된 네트워크 범위 안에서 실행된다.
+#### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/55b1b396-8b0c-4f57-a871-41588b5f1b60)
 
+### kubernetes 같은 경우 다음과 같은 기능을 담당한다.
+- on-demend 상황에 따라 auto scaling 이 가능하다.
+- auto recovery system 이 있어 failure 시 자동으로 replenish (다시 채우다) 한다.
+### 반면 docker compose 는 auto scaling 기능은 없고 failure 시 restart 한다.
+### <br/>
