@@ -52,7 +52,9 @@ networks:
 ### pod 들 구성하는 하나의 서버(실제 컴퓨터 or VM...)는 'nod' 라고 불린다.
 ### 각각의 service, pod 는 설정된 네트워크 범위 안에서 실행된다.
 #### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/55b1b396-8b0c-4f57-a871-41588b5f1b60)
+### <br/>
 
+### auto scaling, recovery system
 ### kubernetes 같은 경우 다음과 같은 기능을 담당한다.
 - on-demend 상황에 따라 auto scaling 이 가능하다.
 - auto recovery system 이 있어 failure 시 자동으로 replenish (다시 채우다) 한다.
