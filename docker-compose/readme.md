@@ -49,7 +49,7 @@ networks:
 ### run containers as service 라고 요약할 수 있다.
 ### 하나의 서버 또는 여러 서버 or machine 에서 실행한다.
 ### 하나의 kubernetes cluster 에는 여러 service 가 있고 service 안에는 pod 들이 있고, pod 안에는 container 가 있다.
-### pod 들 구성하는 하나의 서버(실제 컴퓨터 or VM...)는 'nod' 라고 불린다.
+### pod 들 구성하는 하나의 서버(실제 컴퓨터 or VM...)는 'node' 라고 불린다.
 ### 각각의 service, pod 는 설정된 네트워크 범위 안에서 실행된다.
 #### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/55b1b396-8b0c-4f57-a871-41588b5f1b60)
 ### <br/>
