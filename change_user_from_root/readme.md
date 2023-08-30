@@ -41,3 +41,31 @@ touch ~/project/test
 
 ### 내 계정에서 조작 가능한지 확인하고, user, group 잘 들어가 있는지 확인
 #### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/8279bb6e-d976-474b-a4ed-ed25d5a96e74)
+### <br/><br/><br/>
+
+## root 에서 작업
+### root 에서 작업하고 chown 으로 바꿀 수 도 있다.
+### <br/>
+
+### Docker file 
+```
+FROM ubuntu:focal
+
+RUN apt-get update -y
+#RUN apt-get install -y git
+
+# group uid, user uid can found from /etc/passwd
+RUN groupadd -g 810810 bioinfo
+RUN useradd -r -u 2100 -g bioinfo jhshin
+#USER jhshin
+#WORKDIR /home/jhshin
+```
+### <br/>
+
+### docker 내에서 작업
+#### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/9e426bc5-9138-46c4-8e87-e4cb19048cb9)
+### <br/>
+
+### 내 계정에서 삭제해보기
+### 잘 삭제가 된다.
+#### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/53a9083f-9419-4c54-bedc-e2a2f9253918)
