@@ -68,4 +68,5 @@ RUN useradd -r -u 2100 -g bioinfo jhshin
 
 ### 내 계정에서 삭제해보기
 ### 잘 삭제가 된다.
+### * uid 가 안 맞으면 telegraf 라고 나온다. 하지만 안 맞아도 삭제는 된다.
 #### ![image](https://github.com/Shin-jongwhan/docker/assets/62974484/53a9083f-9419-4c54-bedc-e2a2f9253918)
