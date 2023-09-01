@@ -393,5 +393,121 @@ CMD ["bash"]
 ```
 ### 짜잔 ~ 이렇게 꾸밀 수 있다.
 #### ![image](https://user-images.githubusercontent.com/62974484/206049136-d95ceb04-102f-4136-bf44-0015a74ef9c4.png)
-### <br/><br/><br/> 
+### <br/>
 
+### 위 Dockerfile 은 .bashrc, .vimrc 로 파일을 생성하여 나눌 수 있다.
+### Dockerfile
+```
+FROM ubuntu:focal
+
+# this Dockerfile is for adding baselines
+
+RUN apt-get update -y
+RUN apt-get install -y vim binutils libfreetype6 fontconfig
+
+ENV HOME /root
+WORKDIR /root
+COPY .bashrc $HOME/.bashrc
+COPY .vimrc $HOME/.vimrc
+
+# for centos
+#RUN yum -y install vim
+
+# group uid, user uid can found from /etc/passwd
+# create group, use for husky server of theragenbio
+RUN groupadd -g 810810 bioinfo
+RUN useradd -r -u 2100 -g bioinfo jhshin
+```
+
+### .bashrc
+```
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+        debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+        xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+        if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+        else
+        color_prompt=
+        fi
+fi
+
+color_prompt=yes
+if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\n\[\033[01;33m\]\$\[\033[00m\] '
+else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+*)
+        ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls --color=auto'
+        #alias dir='dir --color=auto'
+        #alias vdir='vdir --color=auto'
+
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias pls='/TBI/People/tbi/jhshin/miniconda3/envs/KTR_WGS/bin/pls -i emoji -d type -d perms -d user -d ctime -d size -c -a'
+```
+
+### .vimrc
+```
+set nu
+set ai
+set si
+set cindent
+set sts=4
+set ts=4
+set shiftwidth=4
+set wmnu
+set laststatus=2
+set ignorecase
+set hlsearch
+set nocompatible
+set ruler
+set fileencodings=utf-8,euc-kr
+set fencs=ucs-bom,utf-8,euc-kr
+set showmatch
+syntax on
+filetype indent on
+set bs=indent,eol,start
+set title
+color evening
+```
+### <br/><br/><br/> 
