@@ -2,6 +2,8 @@
 # Docker compose
 ### 참고 사이트
 - https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/What-is-Kubernetes-vs-Docker-Compose-How-these-DevOps-tools-compare
+### docker compose, docker volume 을 사용하여 해본 프로젝트
+- [airflow](https://github.com/Shin-jongwhan/airflow/tree/main)
 ### <br/><br/><br/>
 
 ## Docker compose 란?
@@ -59,4 +61,4 @@ networks:
 - on-demend 상황에 따라 auto scaling 이 가능하다.
 - auto recovery system 이 있어 failure 시 자동으로 replenish (다시 채우다) 한다.
 ### 반면 docker compose 는 auto scaling 기능은 없고 failure 시 restart 한다.
-### <br/>
+### <br/><br/><br/>
