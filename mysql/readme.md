@@ -66,3 +66,9 @@ port=3307
 !includedir /etc/mysql/conf.d/
 
 ```
+### <br/>
+
+### 그리고 Dockerfile 에 COPY 를 추가해준다.
+```
+COPY my.cnf /etc/my.cnf
+```
