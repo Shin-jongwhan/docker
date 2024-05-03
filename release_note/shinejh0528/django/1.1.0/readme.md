@@ -12,6 +12,7 @@
 - mutt
 - sendmail
 - telnet
+- sshpass
 - pip
   - django-bootstrap-v5
   - djangorestframework
