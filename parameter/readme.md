@@ -26,6 +26,7 @@ cp ${nginx_sa} /etc/nginx/sites-available/default
 ### 에러가 날 것이기 때문에 default 값을 Dockerfile에 정의한다.
 ```
 COPY start_nginx.sh /usr/local/bin/start_nginx.sh
+RUN chmod +x /usr/local/bin/start_nginx.sh
 #...
 
 ENV nginx_config /etc/nginx/nginx.conf
