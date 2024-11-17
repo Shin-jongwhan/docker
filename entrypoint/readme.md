@@ -28,3 +28,11 @@ done
 ```
 RUN echo "/bin/bash /root/smtp_init.sh" >> /root/.bashrc
 ```
+### <br/><br/><br/>
+
+## ENTRYPOINT와 .bashrc의 차이점
+### ENTRYPOINT는 반드시 실행된다. 하지만 .bashrc는 (당연하게도) 쉘 환경을 쓰지 않는다면 실행되지 않는다.
+### 그리고 단 한 번만 실행해야 하는 경우라면 ENTRYPOINT가 맞다. 쉘에 접근할 때마다 실행해야 하면 .bashrc가 맞겠지만...
+### <br/>
+
+### 하지만 쉘 스크립트의 목적은 보통 한 번만 실행해야 하는 경우가 많기 때문에 이런 경우 ENTRYPOINT가 적합한 방법일 것이다.
