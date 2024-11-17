@@ -4,6 +4,10 @@
 ### 그런데 만약에 별도로 service를 실행하게 만들어야 하는 경우는 쉘 스크립트 파일을 만들고 그것을 ENTRYPOINT로 잡아야 강제 종료가 되지 않는다.
 ### dockerfile 맨 마지막 부분에 다음과 같이 적어준다.
 ```
+COPY start_nginx.sh /usr/local/bin/start_nginx.sh
+RUN chmod +x /usr/local/bin/start_nginx.sh
+#...
+
 ENTRYPOINT ["/usr/local/bin/start_nginx.sh"]
 ```
 ### <br/>
