@@ -5,6 +5,10 @@ RUN apt-get upgrade -y
 
 # TODO
 
+# ENV
+# ENV must has default value
+#ENV test test
+
 # COPY entrypoint.sh
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
