@@ -1,4 +1,5 @@
 #FROM shinejh0528/jhshin_base:1.1.1
+FROM ubuntu:24.10
 
 RUN apt-get update -y --fix-missing
 RUN apt-get upgrade -y
