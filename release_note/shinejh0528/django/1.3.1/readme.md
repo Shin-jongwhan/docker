@@ -1,5 +1,6 @@
 ### 250716
 # Update
+### new pip package : gunicorn
 ### Changed SMTP service startup method to use entrypoint
 ### Updated container execution process:
 #### Now starts with:
