@@ -1,3 +1,11 @@
-### 251230
+### 260409
 # Update
-### Install python requests
+### Install python libraries
+- requests
+- python-telegram-bot
+- requests
+- tqdm
+- beautifulsoup4
+- lxml
+- selenium
+- webdriver-manager
