@@ -1,7 +1,6 @@
 ### 260409
 # Update
 ### Install python libraries
-- requests
 - python-telegram-bot
 - requests
 - tqdm
